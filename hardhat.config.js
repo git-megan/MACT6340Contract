@@ -1,5 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
+// import "@nomicfoundation/hardhat-toolbox";
+// import "dotenv/config";
 
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY;
@@ -15,6 +17,7 @@ const STUNT_WALLET_PRIVATE_KEY = process.env.STUNT_WALLET_PRIVATE_KEY;
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY;
 
 module.exports = {
+  //export default {
   etherscan: {
     apiKey: {
       mainnet: ETHERSCAN_API_KEY,
