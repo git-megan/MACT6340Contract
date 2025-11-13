@@ -27,14 +27,14 @@ module.exports = {
     },
   },
   gasReporter: {
-    enabled: false,
+    enabled: process.env.REPORT_GAS ? true : false,
     currency: "USD",
     coinmarketcap: COINMARKETCAP_API_KEY,
-    token: "MATIC", // POL on polygonAmoy
+    token: "POL", // POL on polygonAmoy
     outputFile: "gas-report.txt",
     noColors: true,
   },
-  defaultNetwork: "hardhat", //"polygonAmoy", // hardhat for testing, change this for different networks
+  defaultNetwork: "polygonAmoy", //"polygonAmoy" for test net, // "hardhat" for local testing, change this for different networks
   networks: {
     hardhat: {
       chainId: 31337,
