@@ -8,9 +8,9 @@ const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY;
 const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY;
 
 // change these for different networks
-const ALCHEMY_URL = `https://polygon-amoy.g.alchemy.com/v2/${ALCHEMY_API_KEY}`;
+//const ALCHEMY_URL = `https://polygon-amoy.g.alchemy.com/v2/${ALCHEMY_API_KEY}`;
 //const ALCHEMY_URL = `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}`;
-//const ALCHEMY_URL = `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`;
+const ALCHEMY_URL = `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`;
 //const ALCHEMY_URL = `https://eth-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}`;
 
 const STUNT_WALLET_PRIVATE_KEY = process.env.STUNT_WALLET_PRIVATE_KEY;
@@ -30,11 +30,11 @@ module.exports = {
     enabled: process.env.REPORT_GAS ? true : false,
     currency: "USD",
     coinmarketcap: COINMARKETCAP_API_KEY,
-    token: "POL", // POL on polygonAmoy
+    token: "MATIC", // POL displayed on polygonAmoy
     outputFile: "gas-report.txt",
     noColors: true,
   },
-  defaultNetwork: "polygonAmoy", //"polygonAmoy" for test net, // "hardhat" for local testing, change this for different networks
+  defaultNetwork: "sepolia", //"polygonAmoy" for test net, // "hardhat" for local testing, change this for different networks
   networks: {
     hardhat: {
       chainId: 31337,
